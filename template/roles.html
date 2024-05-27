@@ -1,0 +1,10 @@
+<h1>Roles</h1>
+<ul>
+  {% for role in roles %}
+  <li>{{ role.name }}: 
+    {% for perm in role.permissions.all %}
+      {{ perm.name }}
+    {% endfor %}
+  </li>
+  {% endfor %}
+</ul>

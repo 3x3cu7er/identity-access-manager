@@ -1,0 +1,7 @@
+<h1>Access Rules</h1>
+<ul>
+  {% for rule in rules %}
+    <li>{{ rule.target_user.username }}: {{ rule.can_access }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'add_access_rule' %}">Add Access Rule</a>
